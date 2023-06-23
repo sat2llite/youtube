@@ -1,4 +1,3 @@
-import React, { useContext } from 'react'
 import { useParams } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query'
 import VideoCard from '../components/VideoCard';
@@ -12,7 +11,8 @@ export default function Videos() {
     isLoading, 
     error, 
     data:videos 
-  } = useQuery( ['videos',keyword], () => youtube.search(keyword))
+  } = useQuery( ['videos',keyword], () => youtube.search(keyword),
+  {staleTime:1000*60*3})
   /*
     const { isLoading, error, data } = useQuery([],fnc,options)
   */

@@ -20,8 +20,7 @@ export default function VideoDetail() {
     <section className='flex flex-col lg:flex-row p-4 gap-x-4'>
       <article className='basis-2/3 mb-6'>
         <div style={wrap}>
-          <iframe id="player" type="text/html" width="100%" height="640" style={iframe} 
-            src={`http://www.youtube.com/embed/${video.id}`}  />
+          <iframe id="player" type="text/html" width="100%" height="640" style={iframe} src={`https://www.youtube.com/embed/${video.id}`} title={title} />
         </div>        
         <div>
           <h2 className=' text-xl font-bold pt-4'>{title}</h2>

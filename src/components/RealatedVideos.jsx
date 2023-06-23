@@ -10,7 +10,8 @@ export default function RealatedVideos({id}) {
     isLoading, 
     error, 
     data:videos 
-  } = useQuery( ['related',id], () => youtube.relatedVideos(id))
+  } = useQuery( ['related',id], () => youtube.relatedVideos(id),
+  {staleTime:1000*60*10})
 
   return (
     <>
